@@ -14,7 +14,9 @@ component = html template + classes + metadata
 modules -> componenents are mapped to the application by modules. min 1 module mandate for the application
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/modules.PNG "modules")
 
-# steps to follow any application
+<details open>
+<summary>steps to follow any application</summary>
+
 ## 1.each page - each component- design with requirement wireframe
 main welcome page
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/welcome.PNG "welcome page")
@@ -44,6 +46,7 @@ Download the github app folders and copy paste the APM-start files to APM.
 - create app angular module > atleast one required for a project
 - create main.ts > to add the angular module
 - create main page > usually index.html
+<details>
 
 # selecting the language/ editors/ npm 
 - **VSCode** is used here
