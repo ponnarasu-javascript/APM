@@ -1,10 +1,10 @@
 # Angular-gettingstarted-ps
-#introduction
-#what is Angular
+# introduction
+# what is Angular
 JS framework used in the frontend application
-#why Angularjs
+# why Angularjs
 modular design, buildin backend integration, powerful data binding, expressive html
-#how they marketed to world
+# how they marketed to world
 moderen js framework, will enhance the productivity who uses
-#structure
+# structure
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/anatomyofangular.PNG "anatomy")
