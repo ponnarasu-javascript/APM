@@ -1,4 +1,6 @@
 # Angular-gettingstarted-ps
+<details open>
+<summary><b>Introduction</b></summary>
 # introduction
 ## what is Angular
 JS framework used in the frontend application
@@ -13,9 +15,10 @@ component = html template + classes + metadata
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/component.PNG "component")
 modules -> componenents are mapped to the application by modules. min 1 module mandate for the application
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/modules.PNG "modules")
+</details>
 
 <details open>
-<summary>steps to follow any application</summary>
+<summary><b>steps to follow any application</b></summary>
 
 ## 1.each page - each component- design with requirement wireframe
 main welcome page
@@ -46,7 +49,7 @@ Download the github app folders and copy paste the APM-start files to APM.
 - create app angular module > atleast one required for a project
 - create main.ts > to add the angular module
 - create main page > usually index.html
-<details>
+</details>
 
 # selecting the language/ editors/ npm 
 - **VSCode** is used here
