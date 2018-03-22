@@ -53,3 +53,5 @@ Download the github app folders and copy paste the APM-start files to APM.
 we use type script since it supports all the latest ecma standards. we cant use directly in browser as most of them yet to support es2015+.
 so typescript are transpiled and use in application. usually we minifest the js and run in app.
 - download npm and code in the machine. package manager and the other is serverjs frame work. browser js has limitation like threading, file reading etc. but server has no restrictions.
+
+##version
