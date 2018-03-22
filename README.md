@@ -7,4 +7,4 @@ modular design, buildin backend integration, powerful data binding, expressive h
 #how they marketed to world
 moderen js framework, will enhance the productivity who uses
 #structure
-![Alt text](readme_images/anatomyofangular.png "anatomy")
+![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/anatomyofangular.PNG "anatomy")
