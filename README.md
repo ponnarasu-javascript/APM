@@ -77,7 +77,32 @@ we write many components and make them work together. we return results to angul
 - **class** : code to support the view. property + methods
 - **metadata** : defined with decorator. extra info **for the angular module**
 ![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/component-eg.PNG "Angular Modules")
-This has class component + metadata component + meta data
+This has class component + metadata component
+**meta data** - is A function that adds metadata to a class. prefixed with @. there are lot of decorators available in built.
+selector value is used in the template associated with the class.
+**import statement** - import from third party lib or own modules which exports. 
+eg of angular own modules : @angular/core , @angular/animate, @angular/http, @angular/router
+
+# concept 3 - bootstraping our application
+we wrote component and templates. how to bring to the front end or to the angular app.
+2 steps in bootstraping:
+- index.html (single page application)
+div
+pm-root></pm-root> // **when angular see directive   it checks the app module**
+/div>               //**passes from bootstrap module**
+- App module: atleast one app **module** requires to a application. 
+//usually ng module, browser module and our bootstrap module is present.
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'; 
+import { AppComponent } from './app.component';
+
+@NgModule({ // it decorator and has  array of elements
+  declarations: [  AppComponent  ], // declares all the modules used in front page
+  imports: [    BrowserModule  ], // external modules or own available to all the components
+  providers: [],
+  bootstrap: [AppComponent] // which is the first module to compile. this component contains the root selector in index.html
+})
+export class AppModule { }
 
 
 
