@@ -54,4 +54,32 @@ we use type script since it supports all the latest ecma standards. we cant use 
 so typescript are transpiled and use in application. usually we minifest the js and run in app.
 - download npm and code in the machine. package manager and the other is serverjs frame work. browser js has limitation like threading, file reading etc. but server has no restrictions.
 
-##version
+## First look on project folder
+- Application usually have src -> which contains source files. here app sub-dir contains applicaiton specific files. will add more when requirements increase.
+- 1st step with boiler code would be -> install dependencies using npm.
+  >npm install // dwns dependencies mentioned in pacakge.json and put it in /node_modules. no need to check in these files. add them entries in .gitignore 
+
+# concept 1 - modules
+modules - for code organisation and variable out of global space in js. 
+- ECMA2015 has specification for modules. as per ecma2015, modules are files with export or import which becomes modules
+- angular also has ecma2015 module concept. Also it has its own angular modules.
+- typescript also has modules
+
+ECMA2015 modules - organize the code.
+![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/module_2015.PNG "ECMA 2015 Modules")
+Angular modules - organize the application.
+![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/module_Angular.PNG "Angular Modules")
+
+# concepts 2 - components
+we write many components and make them work together. we return results to angular module.
+**components** = template + class +metadata
+- **template** : view layout with binding and directive
+- **class** : code to support the view. property + methods
+- **metadata** : defined with decorator. extra info **for the angular module**
+![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/component-eg.PNG "Angular Modules")
+This has class component + metadata component + meta data
+
+
+
+
+
