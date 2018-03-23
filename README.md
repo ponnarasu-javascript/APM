@@ -88,10 +88,13 @@ we wrote component and templates. how to bring to the front end or to the angula
 2 steps in bootstraping:
 - index.html (single page application)
 div
-pm-root></pm-root> // **when angular see directive   it checks the app module**
-/div>               //**passes from bootstrap module**
+pm-root>pm-root>/div>   // **when angular see directive .passes from bootstrap module.  it checks the app module**
+
 - App module: atleast one app **module** requires to a application. 
+
 //usually ng module, browser module and our bootstrap module is present.
+```
+code:
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'; 
 import { AppComponent } from './app.component';
@@ -103,7 +106,7 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent] // which is the first module to compile. this component contains the root selector in index.html
 })
 export class AppModule { }
-
+```
 
 
 
