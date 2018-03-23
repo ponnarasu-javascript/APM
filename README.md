@@ -87,8 +87,12 @@ eg of angular own modules : @angular/core , @angular/animate, @angular/http, @an
 we wrote component and templates. how to bring to the front end or to the angular app.
 2 steps in bootstraping:
 - index.html (single page application)
-div
-pm-root>pm-root>/div>   // **when angular see directive .passes from bootstrap module.  it checks the app module**
+```
+<div>
+<pm-root></pm-root>
+</div> 
+```
+// **when angular see directive .passes from bootstrap module.  it checks the app module**
 
 - App module: atleast one app **module** requires to a application. 
 
@@ -100,14 +104,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 @NgModule({ // it decorator and has  array of elements
-  declarations: [  AppComponent  ], // declares all the modules used in front page
+  declarations: [  AppComponent  ], // declares all the modules used in front page. index can check the all the selectors from these components.
   imports: [    BrowserModule  ], // external modules or own available to all the components
-  providers: [],
+  providers: [], // it is for services
   bootstrap: [AppComponent] // which is the first module to compile. this component contains the root selector in index.html
 })
 export class AppModule { }
 ```
 
-
+# dsfa
 
 
