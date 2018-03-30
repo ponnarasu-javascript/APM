@@ -37,7 +37,7 @@ created each component for each page. if component can be reused by 2 component 
 **APM-Final:** The completed files. Use this to see the completed solution from the course. (Updated for Angular version 4.3 or higher)
 
 Download the github app folders and copy paste the APM-start files to APM.
-
+very useful (https://angular.io/guide/quickstart)
 ## 3. any application - follow the following
 - create the app folders > can get from boiler code
 - add package definition package json / config files
@@ -112,6 +112,57 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-# dsfa
+# component as directive
+directives - extending the html. if we give <pm-root> it will generates piece of code and attach to the dom
 
+![Alt text](https://github.com/ponnarasuice/Angular-gettingstarted-ps/blob/master/readme_images/component as directive.PNG "component as directive")
 
+### structural directives - built in directives to use in html
+*nfIf  - condition in the template
+*ngFor - can iterate the objects.
+```
+{{showImage ?'hide':'show'}}
+<img *ngIf='showImage'>
+```
+###interpolation
+from class property to template
+
+in template - we can use {{title name}}
+component - properties are declared for this purpose
+```
+<img [src]='product.imagesrc'> //it is recommended
+<img src={{product.imagesrc}}>
+```
+### event binding
+```
+<button (click) ='toggleImage()'>
+// all the events are listed here (https://developer.mozilla.org/en-US/docs/Web/Events)
+export class Listcomponent{
+  toggleImage():void{
+    ////
+  }
+}
+```
+### 2 way binding
+```
+<input type='text' [{ngModel}]='listFilter'>
+------
+<h3>filtered by {{listFilter}}</h3>
+
+class productlist{
+  listFilter: string = 'cart';
+}
+// ngModel directives are available in angular form module
+// so need to include it in app module
+app.module.ts
+import {formModule} from '@angular/forms';
+
+imports[browsermodule, formmodule]
+*********************************************
+Pipes - transform the values before display. we have built-in pipes. can write custom pipes
+{{product.price|currency}}
+```
+###summary is that
+- 1 index.html having root directive like <pm-root>
+- min 1 module which combines all the components in the application. it also specifies bootstrap html
+- components = template + component + metadata. in component selector is given(we give this selector in the template). inline template or template url is given. also can give style sheets. class has property and methods. properties for 1 way binding. methods for event handling.
