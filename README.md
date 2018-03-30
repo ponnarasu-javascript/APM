@@ -158,9 +158,104 @@ app.module.ts
 import {formModule} from '@angular/forms';
 
 imports[browsermodule, formmodule]
-*********************************************
-Pipes - transform the values before display. we have built-in pipes. can write custom pipes
+
+```
+#components 
+eg:
+```
+@Component({
+  selector: 'pm-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Angular: Getting Started';
+}
+```
+###strong typing
+most of the properites of strong typing in type script
+eg: private welcome:string = 'hello';
+
+###Inerfaces
+es2015 didnt support interfaces but typescript does. so it is used as data type in development only.
+```
+export interface Iproduct{
+  productId:String;
+  calculate(percent:number):number;
+}
+``` 
+```
+import {Iproduct} from './Product';
+
+export class ProductComponent{
+
+  products:Iproduct[]=[
+    {
+      "productId":2,
+      "productname":'brush'
+    },
+    {
+      .....
+    }
+  ];
+}
+```
+###Life cycle hooks
+create - perform initialization
+render
+create&renderchildren
+process change - eg:onchanges - perform action after change to input property
+destroy - eg:onDestroy -perform cleanup
+```
+import {component, OnInit} from '@angualr/core';
+export class productcomponent implements OnInit{ // built in angular lifecycle hooks. use by implements the ng interface
+  ..........
+  ngOnInit():void{
+    console.log('');
+  }
+}
+```
+###Pipes - transform the values before display. we have built-in pipes. can write custom pipes
+```
+inbuilt: use in template
 {{product.price|currency}}
+custom pipe:
+import {Pipe,PipeTransform} from '@angualr/core';
+@Pipe({
+  name:'convertPipe';
+})
+export class convertto implements PipeTransform{
+  transform(value:string,character:string){
+    return value.replace(character,' ');
+  }
+}
+
+in template:
+<td>{{product.productcode | convertpipe:'-'}}</td> // here we are replace - with spaces
+```
+
+###filter the list in component
+```
+//listfilter='cart' change to have- getter and setter
+//in setter assign value to listfilter
+listfilter:string;
+set listfilter(value:string){
+  this.listfilter = value; // given in the input box
+  this.filteredList = this.listfilter? this.performfilter:this.product; //have original product if something given in input box, it is filtered
+}
+filteredList:Iproduct[];
+product:Iproduct[.....]//stores original values
+
+//filter function
+performfilter(filterBy:string):Iproduct[]{
+  filterBy = filterBy.tolowercase();
+  //this is inbuilt array function
+  return this.products.filter((product:Iproduct)=>
+      product.productname.tolowercase().indexOf(filterBy)!==-1);
+}
+
+template: 
+<tr *ngFor='let product of filteredproducts'>
 ```
 ###summary is that
 - 1 index.html having root directive like <pm-root>
